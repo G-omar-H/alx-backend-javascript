@@ -119,6 +119,7 @@ alx-backend-javascript/
 # Credits
 
 This project was created by OGhazi.
-License
+
+# License
 
 This project is licensed under the MIT License.
