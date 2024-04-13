@@ -1,4 +1,3 @@
-
 module.exports = {
   env: {
     browser: false,
@@ -7,7 +6,6 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
-    'plugin:jest/all',
   ],
   globals: {
     Atomics: 'readonly',
@@ -26,6 +24,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'jest/no-hooks': 2, // Add this line to include the jest/no-hooks rule
   },
   overrides:[
     {
@@ -34,4 +33,3 @@ module.exports = {
     }
   ]
 };
-
