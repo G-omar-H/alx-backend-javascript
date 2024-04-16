@@ -1,15 +1,9 @@
-export default function cleanSet(set, startString) {
-  if (startString === '') {
+export default function cleanSet(xSet, xStartString) {
+  if (!xSet || !xStartString || !(xSet instanceof Set) || typeof xStartString !== 'string') {
     return '';
   }
-  let result = '';
-  set.forEach((value) => {
-    if (value.startsWith(startString)) {
-      if (result.length > 0) {
-        result += '-';
-      }
-      result += value.substring(startString.length);
-    }
-  });
-  return result;
+  return Array.from(xSet)
+    .filter((ele) => ele && ele.startsWith(xStartString))
+    .map((ele) => ele.replace(xStartString, ''))
+    .join('-');
 }
