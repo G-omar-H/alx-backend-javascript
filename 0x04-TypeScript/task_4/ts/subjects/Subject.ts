@@ -1,4 +1,4 @@
-namespace Subjects {
+export namespace Subjects {
     export class Subject {
         protected _teacher: Teacher;
 
