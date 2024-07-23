@@ -2,7 +2,7 @@ const readDatabase = require('../utils');
 
 class StudentsController {
   static getAllStudents(request, response) {
-    readDatabase('./database.csv').then((studentsPerField) => {
+    readDatabase(process.argv[2].toString()).then((studentsPerField) => {
       const sortedStudentsPerField = {};
       let output = 'This is the list of our students\n';
       Object.keys(studentsPerField).sort().forEach((key) => {
@@ -19,7 +19,7 @@ class StudentsController {
   }
 
   static getAllStudentsByMajor(request, response) {
-    readDatabase('./database.csv').then((studentsPerField) => {
+    readDatabase(process.argv[2].toString()).then((studentsPerField) => {
       const field = request.params.major;
       console.log(field);
       if (field === 'CS' || field === 'SWE') {
