@@ -53,7 +53,7 @@ app.get('/students', async (req, res) => {
     output += await countStudents(file);
     res.send(output);
   } catch (error) {
-    res.send(error.message);
+    res.send(`This is the list of our students\n${error.message}`);
   }
 });
 
