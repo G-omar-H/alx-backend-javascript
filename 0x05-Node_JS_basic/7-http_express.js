@@ -47,8 +47,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
+  let output = 'This is the list of our students\n';
+  const file = process.argv[2];
   try {
-    const output = await countStudents(process.argv[2]);
+    output += await countStudents(file);
     res.send(output);
   } catch (error) {
     res.send(error.message);
