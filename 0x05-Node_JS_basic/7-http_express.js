@@ -12,7 +12,7 @@ function countStudents(filePath) {
         return;
       }
       const lines = data.split('\n').filter((line) => line.trim() !== '');
-      if (lines.length === 0) {
+      if (lines.length <= 1) {
         reject(new Error('Cannot load the database'));
         return;
       }
@@ -37,7 +37,7 @@ function countStudents(filePath) {
           result += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
         }
       }
-      resolve(result);
+      resolve(result.trim());
     });
   });
 }
