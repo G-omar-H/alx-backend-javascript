@@ -28,8 +28,5 @@
     "mocha": "^9.2.0",
     "sinon": "^12.0.1"
   },
-  "bugs": {
-    "url": "https://github.com/Pericles001/alx-backend-javascript/issues"
-  },
-  "homepage": "https://github.com/Pericles001/alx-backend-javascript#readme"
+  
 }
